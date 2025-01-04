@@ -1297,10 +1297,10 @@ button[type=submit] {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 0;
-  /* background: #CBA244; */
-  background: radial-gradient(#CBA244, rgb(197, 188, 188));
+  background: #CBA244;
+  /* background: radial-gradient(#CBA244, rgb(197, 188, 188)); */
   text-align: center;
-  border-radius: 30px;
+  border-radius: 3px;
 }
 .benefits .col {
   border-right: 1px solid #eee;
