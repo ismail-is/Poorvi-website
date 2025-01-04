@@ -88,7 +88,7 @@
             <li><a href="apartment-three-rooms.html">3 Rooms 90m²</a></li>
           </ul>
         </li> -->
-        <li><a href="facilities.html">FACILITIES</a></li>
+         <!-- <li><a href="facilities.html">FACILITIES</a></li> -->
         <!-- <li><a href="contact.html">AMENITIES      </a></li> -->
         <li><a href="photo-gallery.html">GALLERY</a></li>
       
@@ -202,10 +202,10 @@
 <!-- end navbar -->
 <header class="page-header" data-background="images/slide01.jpg" data-stellar-background-ratio="1.15">
 	<div class="container">
-		<h1>Contact</h1>
+		<h1>CONTACT</h1>
 		<p>The smaller male cones release pollen, which fertilizes the female</p>
 		  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Start</a></li>
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Contact</li>
   </ol>
 	</div>
@@ -241,11 +241,21 @@
         	 <div class="map">
           <div class="pattern-bg" data-stellar-ratio="1.03"></div>
           <!-- end pattern-bg -->
-           
-          <div class="holder" data-stellar-ratio="1.07"> 
-            <a href="https://www.google.com/maps/place/Poorvi+Estella/@12.8861069,74.843312,680m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba35b5911dae0c7:0x419f6a097ca3a847!8m2!3d12.8861069!4d74.843312!16s%2Fg%2F11q99lybtl?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="blank">
-		<img src="images/allimg/MAP.webp" allowfullscreen style="height: 620px;"></img></a>
-         </div>
+          <div id="responsiveHolder" class="holder" data-stellar-ratio="1.07" style="width: 100%; max-width: 100%; overflow: hidden;">
+            <a href="https://www.google.com/maps/place/Poorvi+Estella/@12.8861069,74.843312,680m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba35b5911dae0c7:0x419f6a097ca3a847!8m2!3d12.8861069!4d74.843312!16s%2Fg%2F11q99lybtl?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+              <img src="images/allimg/poorvimaps.webp" alt="Poorvi Maps" style="width: 400px; height: auto; display: block;">
+            </a>
+          </div>
+          
+          <script>
+            // Apply styles for mobile view dynamically
+            const holder = document.getElementById('responsiveHolder');
+            if (window.innerWidth <= 768) {
+              holder.style.marginLeft = '-70px';
+            }
+          </script>
+          
+          
       
           <!-- end holder --> 
         </div>
