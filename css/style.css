@@ -429,7 +429,8 @@ button[type=submit] {
   right: 0;
   top: 0;
   z-index: 12;
-  background: #ebcfa7;
+  background: #CBA244;
+  /* background: #ebcfa7; */
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -1156,7 +1157,7 @@ button[type=submit] {
   position: absolute;
   left: 15px;
   bottom: -30px;
-  background: #3C2414;
+  background: #CBA244;
   width: 70%;
   padding: 40px 30px;
   padding-right: 60px;
@@ -1901,7 +1902,7 @@ button[type=submit] {
 }
 .apartment .property-infos {
   display: inline-block;
-  background: #3C2414;
+  background: #CBA244;
   color: #fff;
   padding: 50px;
   margin-bottom: 50px;
