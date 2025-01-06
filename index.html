@@ -69,6 +69,11 @@
       height: 100%; /* Makes the video take the full height of the screen on mobile */
     }
   }
+  @media (max-width: 768px) {
+    #recent-gallery1{
+      display: none !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -320,10 +325,11 @@
         <div class="social-media">
           <h6>SOCIAL MEDIA</h6>
           <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-google"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/poorvihousing/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/poorvihousingprivatelimited/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com/poorvi_housing?mx=2"><i class="fab fa-twitter"></i></a></li>
+           
+            <li><a href="https://www.youtube.com/channel/UCqn1ej3cVb47BvlXd3c7RZA"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </div>
         <!-- end social-media --> 
@@ -422,7 +428,7 @@
         <!-- <h3>Decorated Flats in Pozniaky - Kiev</h3> -->
         <div class="video-container">
           <video id="videoPlayer" controls muted autoplay>
-              <source src="videos/Poorvi video.mp4" type="video/mp4">
+              <source src="videos/poorvi-videos.mp4" type="video/mp4">
               <!-- Add additional sources if needed for other formats -->
           </video>
       </div>
@@ -1059,21 +1065,51 @@
 <section class="recent-gallery" >
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-5 wow fadeInUp"> <b></b>
+      <div class="col-lg-4 wow fadeInUp"> <b></b>
         <h4><span>Property</span> Inner Gallery</h4>
         <h3>Lux Living Spaces in Pozniaky - Kiev</h3>
         <a href="/photo-gallery.html" class="link">SEE ALL GALLERY <i class="fas fa-caret-right"></i></a> </div>
-      <div class="col-lg-7">
+      <div class="col-lg-8" style="margin-top: -100px;">
         <div class="row inner">
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0s">
-            <figure data-stellar-ratio="1.07"> <a href="images/allimg/homepage/gallery/1.webp" data-fancybox><img src="images/allimg/homepage/gallery/1.webp" alt="Image"></a> </figure>
+            <figure data-stellar-ratio="1.07"> <a href="images/allimg/allfloor/masteroom.webp" data-fancybox><img src="images/allimg/allfloor/masteroom.webp" alt="Image"></a> </figure>
           </div>
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.05s">
-            <figure data-stellar-ratio="1.15"> <a href="images/gallery-thumb02.jpg" data-fancybox><img src="images/allimg/homepage/gallery/2.webp" alt="Image"></a> </figure>
+            <figure data-stellar-ratio="1.15"> <a href="images/allimg/homepage/unsize/7.webp" data-fancybox><img src="images/allimg/homepage/unsize/7.webp" alt="Image"></a> </figure>
           </div>
+          
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.10s">
-            <figure data-stellar-ratio="1.04"> <a href="images/gallery-thumb03.jpg" data-fancybox><img src="images/allimg/homepage/gallery/13.webp" alt="Image"></a> </figure>
+            <figure data-stellar-ratio="1.04"> <a href="images/allimg/homepage/unsize/24.webp" data-fancybox><img src="images/allimg/homepage/unsize/24.webp" alt="Image"></a> </figure>
           </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="recent-gallery" style="margin-top: -420px;margin-bottom: -130px;" id="recent-gallery1">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 wow fadeInUp"> <b></b>
+        <h4></h4>
+        <h3></h3>
+        </div>
+      <div class="col-lg-8">
+        <div class="row inner">
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0s">
+            <figure data-stellar-ratio="1.07"> <a href="images/allimg/allfloor/dinnnerhall.webp" data-fancybox><img src="images/allimg/allfloor/dinnnerhall.webp" alt="Image"></a> </figure>
+          </div>
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.05s">
+            <figure data-stellar-ratio="1.15"> <a href="images/allimg/homepage/unsize/25.webp" data-fancybox><img src="images/allimg/homepage/unsize/25.webp" alt="Image"></a> </figure>
+          </div>
+          
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.10s">
+            <figure data-stellar-ratio="1.04"> <a href="images/allimg/allfloor/4-tv.webp" data-fancybox><img src="images/allimg/allfloor/4-tv.webp" alt="Image"></a> </figure>
+          </div>
+         
         </div>
       </div>
     </div>
@@ -1130,7 +1166,7 @@
       <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.10s">
         <ul class="footer-menu">
           <li><a href="/">Home</a></li>
-          <li><a href="about">About Estella</a></li>
+          <li><a href="about.html">About Estella</a></li>
           <li><a href="photo-gallery.html"> Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
