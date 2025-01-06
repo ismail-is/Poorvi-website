@@ -3463,5 +3463,45 @@ button[type=submit] {
   color: #5E7F00 !important;
   
 }
+
+
+
+/* FOOTER BAR */
+.footer-bar1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -80px;
+
+}
+.footer-bar1 .inner {
+  /* background: #CBA244; */
+  background: linear-gradient(135deg, #3C2414, #3C2414 ,  #3C2414,#3C2414); /* Gradient effect */
+  padding: 60px 30px;
+  color: #fff;
+  border-radius: 10px;
+}
+.footer-bar1 .inner figure {
+  margin-bottom: 20px;
+  float: left;
+  margin-right: 30px;
+}
+.footer-bar1 .inner figure img {
+  height: 70px;
+  
+}
+.footer-bar1 .inner h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.footer-bar1 .inner p {
+  font-size: 16px;
+  margin: 0;
+}
+.footer-bar1 .inner strong {
+  font-weight: 600;
+  text-decoration: underline;
+}
 /* custome */
 /*# sourceMappingURL=style.css.map */
