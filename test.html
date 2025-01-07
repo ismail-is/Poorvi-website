@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Contact Form</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    .contact {
+      padding: 50px 0;
+      color: #333;
+    }
+
+    .containers {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .contact-form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 14px 8px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 700px;
+      color: #333;
+      display: none; /* Initially hidden */
+      transition: all 0.5s ease-in-out;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #CDA447;
+      box-shadow: 0 0 5px rgba(232, 189, 102, 0.5);
+    }
+
+    .form-group span {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 14px;
+      color: #aaa;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    .form-group input:focus + span,
+    .form-group textarea:focus + span,
+    .form-group select:focus + span,
+    .form-group select:valid + span {
+      top: -15px;
+      left: 10px;
+      font-size: 12px;
+      color: #3C2414;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .form-group select {
+      appearance: none; /* Hide default dropdown arrow */
+      background: #fff;
+    }
+
+    button {
+      background-color: #3C2414;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #191a1b;
+    }
+
+    .alert {
+      display: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    /* Button to toggle form visibility */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #3C2414;
+      color: white;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none; /* Initially hidden */
+    }
+
+    /* Additional CSS for margin when form is closed */
+    .contact-form.closed {
+      margin-bottom: 30px; /* Add a margin when the form is closed */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .contact {
+        padding: 30px 0;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-group span {
+        font-size: 12px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div>
+  <section class="contact">
+    <div class="containers">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <form id="contactForm" name="contact" method="post">
+              <div class="form-group">
+                <input type="text" name="name" id="name" autocomplete="off" required placeholder=" ">
+                <span>Name</span>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" id="email" autocomplete="off" required placeholder=" ">
+                <span>Email</span>
+              </div>
+              <div class="form-group">
+                <div style="display: flex; gap: 10px; align-items: center;">
+                  <select name="countryCode" id="countryCode" required style="width: 30%; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; outline: none;">
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+91" selected>+91 (India)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+61">+61 (Australia)</option>
+                    <option value="+81">+81 (Japan)</option>
+                    <option value="+971">+971 (UAE)</option>
+                    <option value="+86">+86 (China)</option>
+                  </select>
+                  <input type="tel" name="contact" id="contact" pattern="[0-9]{10}" required placeholder=" " maxlength="10" style="width: 70%;">
+                </div>
+              </div>
+              <div class="form-group">
+                <select name="budget" id="budget" required>
+                  <option value="1cr-1.5cr">1cr-1.5cr</option>
+                  <option value="1.5cr-2cr">1.5cr-2cr</option>
+                  <option value="2cr-3cr">2cr-3cr</option>
+                  <option value="3cr-4cr">3cr-4cr</option>
+                </select>
+                <span>Budget</span>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" autocomplete="off" required placeholder=" "></textarea>
+                <span>Message</span>
+              </div>
+              <div class="form-group">
+                <button id="submit" type="submit">Submit</button>
+              </div>
+            </form>
+            <div class="form-group">
+              <div id="success" class="alert alert-success" role="alert">
+                Your message was sent successfully! We will be in touch as soon as we can.
+              </div>
+              <div id="error" class="alert alert-danger" role="alert">
+                Something went wrong, try refreshing and submitting the form again.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button class="toggle-btn" id="toggleBtn">Enquire Now</button>
+</div>
+  <script>
+    // Show the contact form after 5 seconds
+    window.onload = function() {
+      setTimeout(function() {
+        document.querySelector('.contact-form').style.display = 'block';
+        document.getElementById('toggleBtn').style.display = 'block'; // Show the toggle button
+      }, 5000);
+    };
+
+    // Toggle the visibility of the form
+    document.getElementById('toggleBtn').addEventListener('click', function() {
+      const form = document.querySelector('.contact-form');
+      if (form.style.display === 'block') {
+        form.style.display = 'none';
+        form.classList.add('closed'); // Add closed class to add margin
+        this.textContent = 'Enquire Now';
+      } else {
+        form.style.display = 'block';
+        form.classList.remove('closed'); // Remove closed class to remove margin
+        this.textContent = 'Enquire Now';
+      }
+    });
+  </script>
+</body>
+</html>
