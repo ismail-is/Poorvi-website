@@ -898,7 +898,7 @@ button[type=submit] {
   align-items: center;
   justify-content: center;
   align-content: center;
-  background-size: auto 110%;
+  /* background-size: auto 120%; */
 }
 .slider .slider-container .swiper-slide:after {
   content: "";
@@ -907,7 +907,7 @@ button[type=submit] {
   position: absolute;
   left: 0;
   top: 0;
-  background: #26282b;
+  /* background: #26282b; */
   /* background: -moz-linear-gradient(161deg, #26282b 0%, #26282b 49%, #3C2414 100%);
   background: -webkit-linear-gradient(161deg, #26282b 0%, #26282b 49%, #3C2414 100%);
   background: linear-gradient(161deg, #26282b 0%, #26282b 49%, #3C2414 100%); */
