@@ -74,6 +74,131 @@
       display: none !important;
     }
   }
+
+
+  /* banner *//* banner *//* banner *//* banner *//* banner */
+  /* banner 1111 */
+   /* Mobile Screen (Up to 767px) */
+   @media only screen and (max-width: 767px) {
+    #banner-slide {
+      background-size: cover;
+      background-position: center;
+    }
+    #banner1 h1{
+      padding: 15px;
+      text-align: center;   
+    }
+    #banner1 h2{
+     font-size: 18px;
+     text-align: center;
+     margin-top: 20px;
+     
+    }
+  }
+
+  /* Laptop/Tablet Screen (768px and above) */
+  @media only screen and (min-width: 768px) {
+    #banner-slide  {
+      background-size: cover;
+      background-position: center;
+    }
+    #banner1  {
+      padding: 30px;
+      margin-top: 200px;
+      text-align: center;
+     
+    }
+  }
+   /* banner 1111 */ /* banner 1111 */
+
+
+    /* banner 2222 */ /* banner 2222 */
+    @media only screen and (max-width: 767px) {
+    #banner-slide2 {
+      background-size: cover;
+      background-position: center;
+    }
+    #banner2 {
+      margin-top: -530px;
+    }
+    #banner2 h1{
+      padding: 15px;
+      text-align: center; 
+      
+    }
+    #banner2 h2{
+     font-size: 18px;
+     text-align: center;
+     margin-top: -30px;
+     color: black;
+     
+    }
+    #btn2{
+      display: flex;
+      justify-content: center !important;
+    }
+  }
+
+  /* Laptop/Tablet Screen (768px and above) */
+  @media only screen and (min-width: 768px) {
+    #banner-slide2  {
+      background-size: cover;
+      background-position: center;
+       
+    }
+    #banner2  {
+      padding: 30px;
+     margin-left: 250px;
+      margin-top: 90px; 
+     
+    } #banner2  h1{
+      color: white;
+    }
+  }
+    /* banner 333 */ /* banner 333 */
+
+
+    /* banner 333 */
+   /* Mobile Screen (Up to 767px) */
+   @media only screen and (max-width: 767px) {
+    #banner-slide {
+      background-size: cover;
+      background-position: center;
+      background-position: 60% !important;
+      
+
+    }
+    #banner3{
+      margin-top: 230px;
+    }
+    #banner3 h1{
+      padding: 15px;
+      text-align: center;  
+      color: white !important; 
+    }
+    #banner3 h2{
+     font-size: 18px;
+     text-align: center;
+     margin-top: 20px;
+     
+    }
+  }
+
+  /* Laptop/Tablet Screen (768px and above) */
+  @media only screen and (min-width: 768px) {
+    #banner-slide  {
+      background-size: cover;
+      background-position: center;
+    }
+    #banner3  {
+      padding: 30px;
+      margin-top: 200px;
+      text-align: center;
+     
+    }
+  }
+   /* banner 333 */ /* banner 333 */
+  /* banner *//* banner *//* banner *//* banner */
 </style>
 </head>
 <body>
@@ -285,32 +410,38 @@
 <header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('images/main2.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;" data-stellar-background-ratio="1.15">
-        <div class="container">
-          <h1 style="margin-top: 120px;"><span>Welcome to </span> Your New Home</h1>
+      <div class="swiper-slide" id="banner-slide" style="background-image: url('images/main2.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;" data-stellar-background-ratio="1.15">
+        <div class="container" id="banner1">
+          <h1 ><span>Welcome to </span> Your New Home</h1>
           <h2> Stylish living, thoughtfully designed</h2>
-          <a href="about.html">ABOUT ESTELLA <i class="fas fa-caret-right"></i></a>
+          <div style="display: flex;justify-content: center;"> <a href="contact.html" >Enquire Now <i class="fas fa-caret-right"></i></a></div>
+          
         </div>
-        <!-- end container --> 
       </div>
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="images/main2.webp" data-stellar-background-ratio="1.15">
-        <div class="container">
+
+
+      <div class="swiper-slide" id="banner-slide2" style="background-image: url('images/main3.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;" data-stellar-background-ratio="1.15">
+        <div class="container" id="banner2">
           <h1 style="margin-top: 120px;"><span>Live</span>  the Estella Life</h1>
           <h2>Modern homes crafted for luxury </h2>
-          <a href="about.html">ABOUT ESTELLA <i class="fas fa-caret-right"></i></a>
+          <div style="display: flex;justify-content: start;" id="btn2"> <a href="contact.html" >Enquire Now <i class="fas fa-caret-right"></i></a></div>
         </div>
-        <!-- end container --> 
       </div>
+
+
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="images/main2.webp" data-stellar-background-ratio="1.15">
-        <div class="container">
+
+
+      <div class="swiper-slide" id="banner-slide3" style="background-image: url('images/main4.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;" data-stellar-background-ratio="1.15">
+        <div class="container"  id="banner3">
           <h1 style="margin-top: 120px;"><span>Discover </span> Poorvi Estella</h1>
           <h2>Spacious homes with modern amenities.</h2>
-          <a href="about.html">ABOUT ESTELLA <i class="fas fa-caret-right"></i></a>
+          <div style="display: flex;justify-content: center;" > <a href="contact.html" >Enquire Now <i class="fas fa-caret-right"></i></a></div>
         </div>
-        <!-- end container --> 
       </div>
+
+
       <!-- end swiper-slide --> 
     </div>
     <!-- Add Pagination -->

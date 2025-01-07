@@ -920,10 +920,11 @@ button[type=submit] {
   padding-left: 100px;
 }
 .slider .slider-container .swiper-slide .container h1 {
-  font-size: 5vw;
+  font-size: 40px;
+  /* font-size: 3vw; */
   color: #fff;
   font-family: "Playfair Display", serif;
-  color: #ebcfa7;
+  color: #721F49;
   margin-bottom: 20px;
 }
 .slider .slider-container .swiper-slide .container h1 span {
@@ -937,7 +938,7 @@ button[type=submit] {
   position: absolute;
   left: 0;
   top: 40px;
-  background: url(../images/title-mark.png) center no-repeat;
+  /* background: url(../images/title-mark.png) center no-repeat; */
   background-size: contain;
   z-index: -1;
 }
@@ -963,14 +964,16 @@ button[type=submit] {
   -ms-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+  background: #3C2414;
 }
 .slider .slider-container .swiper-slide .container a i {
   margin-left: 10px;
 }
 .slider .slider-container .swiper-slide .container a:hover {
   text-decoration: none;
-  background: #3C2414;
-  border-color: #3C2414;
+  background: transparent;
+  border-color: #ebcfa7;
+  color: #3C2414;
 }
 .slider .slider-container .swiper-slide .container figure {
   float: left;
