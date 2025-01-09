@@ -9,7 +9,7 @@
 <meta name="author" content="Themezinho">
 <meta name="description" content="ABOUT ESTELLA | Real Estate & Luxury Homes">
 <meta name="keywords" content="ABOUT ESTELLA, realestate, flat, apartment, benefits, facility, consultation, home, house, studio, pool, animation, transportation">
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <!-- SOCIAL MEDIA META -->
 <meta property="og:description" content="ABOUT ESTELLA | Real Estate & Luxury Homes">
 <meta property="og:image" content="http://www.themezinho.net/ABOUT ESTELLA/preview.png">
@@ -1344,6 +1344,70 @@
   <!-- end container --> 
 </footer>
 <!-- end footer --> 
+<div id="content"></div>
+
+<script>
+  // Initialize EmailJS
+  emailjs.init("t_70k4BOXnkGl5qGc"); // Replace with your EmailJS User ID
+
+  // Check if the form has already been shown
+  const hasFormShown = localStorage.getItem("formShown");
+
+  // Fetch the content of test.html and inject it into the content div
+  window.onload = function () {
+    if (!hasFormShown) { // Only show the form if it hasn't been shown previously (manual refresh)
+      setTimeout(function () {
+        fetch('test.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("content").innerHTML = data;
+
+            // Show the popup after injecting content
+            const formPopup = document.getElementById("myForm");
+            if (formPopup) {
+              formPopup.style.display = "block";
+            }
+          })
+          .catch(error => console.log('Error fetching test.html:', error));
+      }, 5000); // Delay of 5 seconds before fetching test.html
+    }
+  };
+
+  // Close the form
+  function closeForm() {
+    const formPopup = document.getElementById("myForm");
+    if (formPopup) {
+      formPopup.style.display = "none";
+    }
+    // Set localStorage flag to indicate the form has been shown in this session
+    localStorage.setItem("formShown", "true");
+  }
+
+  // Send email
+  function sendEmail() {
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      contact: document.getElementById("contact").value,
+      budget: document.getElementById("budget").value,
+      describes: document.getElementById("describes").value,
+    };
+
+    emailjs
+      .send("service_ua83vk6", "template_jt7e6ps", formData)
+      .then(
+        function (response) {
+          alert("Message sent successfully!");
+          closeForm(); // Close the form after successful submission
+        },
+        function (error) {
+          alert("Failed to send message.");
+          console.error("EmailJS Error:", error);
+        }
+      );
+  }
+</script>
+
 
 <!-- JS FILES --> 
 <script src="js/jquery.min.js"></script> 
