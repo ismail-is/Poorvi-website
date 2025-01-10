@@ -1350,12 +1350,13 @@
   // Initialize EmailJS
   emailjs.init("t_70k4BOXnkGl5qGc"); // Replace with your EmailJS User ID
 
-  // Check if the form has already been shown
-  const hasFormShown = localStorage.getItem("formShown");
+  // Check if the form has already been shown in this session
+  const hasFormShown = sessionStorage.getItem("formShown");
 
   // Fetch the content of test.html and inject it into the content div
   window.onload = function () {
-    if (!hasFormShown) { // Only show the form if it hasn't been shown previously (manual refresh)
+    // Only show the form if it hasn't been shown in the current session
+    if (!hasFormShown) {
       setTimeout(function () {
         fetch('test.html')
           .then(response => response.text())
@@ -1371,6 +1372,11 @@
           .catch(error => console.log('Error fetching test.html:', error));
       }, 5000); // Delay of 5 seconds before fetching test.html
     }
+
+    // Remove the sessionStorage item after 1 minute (60,000 ms)
+    setTimeout(function () {
+      sessionStorage.removeItem("formShown");
+    }, 60000); // 1 minute
   };
 
   // Close the form
@@ -1379,8 +1385,8 @@
     if (formPopup) {
       formPopup.style.display = "none";
     }
-    // Set localStorage flag to indicate the form has been shown in this session
-    localStorage.setItem("formShown", "true");
+    // Set sessionStorage flag to indicate the form has been shown in this session
+    sessionStorage.setItem("formShown", "true");
   }
 
   // Send email
@@ -1407,6 +1413,8 @@
       );
   }
 </script>
+
+
 
 
 <!-- JS FILES --> 
